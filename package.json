@@ -8,6 +8,7 @@
 		"build": "astro build",
 		"preview": "astro build && wrangler pages dev",
 		"astro": "astro",
+		"og": "bun scripts/og-image/render.ts",
 		"deploy": "astro build && wrangler pages deploy"
 	},
 	"dependencies": {

@@ -4,7 +4,13 @@ import { sortTrips, strikePath, type Trip } from "./checklist";
 test("sorts trail names without changing the source list or trip details", () => {
 	const trips: Trip[] = [
 		{ text: "Z Trail", description: "Last trail", done: false },
-		{ text: "Alta Via 2", description: "First trail", done: true, year: 2022, note: "Hiked it." },
+		{
+			text: "Alta Via 2",
+			description: "First trail",
+			done: true,
+			year: 2022,
+			note: "Hiked it.",
+		},
 	];
 	const sorted = sortTrips(trips);
 	expect(sorted.map((trip) => trip.text)).toEqual(["Alta Via 2", "Z Trail"]);

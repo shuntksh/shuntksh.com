@@ -18,8 +18,10 @@ There is no blog, UI framework, CSS framework, or server code.
 - `src/styles/global.css` - all styles; design tokens are at the top on `:root`
 - `src/assets/fonts/` - Atkinson Hyperlegible files and their license, loaded
   through the Astro Fonts API configured in `astro.config.mjs`
-- `public/` - favicon, `robots.txt`, and `_headers` (Cloudflare Pages security
-  and cache headers)
+- `scripts/og-image/` - HTML template and script for the social preview image;
+  run `bun run og` after editing the template to regenerate `public/og-image.png`
+- `public/` - favicon, `og-image.png`, `robots.txt`, and `_headers`
+  (Cloudflare Pages security and cache headers)
 
 Astro emits a Content Security Policy `<meta>` tag on every page
 (`security.csp`). Keep scripts in Astro `<script>` blocks so they get hashed, and
@@ -29,6 +31,8 @@ do not load third-party scripts, styles, or fonts without updating the policy.
 
 - `bun run dev` - start the local development server
 - `bun run build` - build for production
+- `bun run og` - regenerate the social preview image (needs Google Chrome or
+  `CHROME_PATH`)
 - `bun run preview` - build and preview with Cloudflare Pages locally
 - `bun run deploy` - build and deploy to Cloudflare Pages
 - `bun fmt` - format code (configured in `bunfig.toml`; skips `.astro` files)

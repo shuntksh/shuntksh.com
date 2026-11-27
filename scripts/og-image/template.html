@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>shuntksh.com social preview</title>
+		<style>
+			@font-face {
+				font-family: "Atkinson";
+				src: url("{{FONT_REGULAR}}") format("woff");
+				font-weight: 400;
+			}
+			@font-face {
+				font-family: "Atkinson";
+				src: url("{{FONT_BOLD}}") format("woff");
+				font-weight: 700;
+			}
+
+			:root {
+				--ink: rgb(15 18 25);
+				--text: rgb(34 41 57);
+				--muted: oklch(55.1% 0.027 264.364);
+				--marker: #ffe500;
+				--link: #0000ee;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				width: 1200px;
+				height: 630px;
+				margin: 0;
+				overflow: hidden;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column;
+				padding: 88px 96px 72px;
+				background: #fff;
+				color: var(--text);
+				font-family: "Atkinson", sans-serif;
+				font-size: 36px;
+				line-height: 1.5;
+			}
+
+			h1 {
+				margin: 0;
+				color: var(--ink);
+				font-size: 88px;
+				font-weight: 700;
+				letter-spacing: -0.025em;
+				line-height: 1.1;
+			}
+
+			.prompt {
+				margin-right: 0.3em;
+				color: var(--muted);
+				font-weight: 400;
+			}
+
+			.cursor {
+				display: inline-block;
+				width: 0.5em;
+				height: 0.9em;
+				margin-left: 0.12em;
+				vertical-align: -0.06em;
+				background: var(--ink);
+			}
+
+			/* The plain inset rule old browsers drew for <hr>. */
+			hr {
+				width: 100%;
+				margin: 44px 0 40px;
+				border: 0;
+				border-top: 2px inset #c0c0c0;
+			}
+
+			p {
+				margin: 0;
+				max-width: 30ch;
+			}
+
+			/* Same hand-drawn marker as the site. */
+			.marker {
+				position: relative;
+				display: inline-block;
+				white-space: nowrap;
+				isolation: isolate;
+			}
+
+			.marker svg {
+				position: absolute;
+				inset: -0.08em -0.18em;
+				width: calc(100% + 0.36em);
+				height: calc(100% + 0.16em);
+				overflow: visible;
+				color: var(--marker);
+			}
+
+			.marker span {
+				position: relative;
+				color: var(--text);
+			}
+
+			footer {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				margin-top: auto;
+				font-size: 28px;
+			}
+
+			footer a {
+				color: var(--link);
+				text-decoration: underline;
+				text-underline-offset: 0.15em;
+			}
+
+			footer small {
+				color: var(--muted);
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<span class="prompt">&gt;</span>Shun Takahashi<span class="cursor"></span>
+		</h1>
+		<hr />
+		<p>
+			<span class="marker"
+				><svg
+					viewBox="0 0 104 36"
+					preserveAspectRatio="none"
+					aria-hidden="true"
+				>
+					<path d="{{MARKER_A}}" fill="currentColor" opacity="0.55" />
+					<path d="{{MARKER_B}}" fill="currentColor" opacity="0.25" /></svg
+				><span>Software engineer</span></span
+			>
+			in Seattle, working on cloud and AI infrastructure.
+		</p>
+		<footer>
+			<a href="https://shuntksh.com/">shuntksh.com</a>
+			<small>Best viewed with any browser</small>
+		</footer>
+	</body>
+</html>

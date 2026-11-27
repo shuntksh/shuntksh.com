@@ -10,7 +10,9 @@ export interface Trip {
 
 /** Sort a copy so the data file can use any entry order. */
 export function sortTrips(trips: readonly Trip[]): Trip[] {
-	return [...trips].sort((first, second) => first.text.localeCompare(second.text, "en"));
+	return [...trips].sort((first, second) =>
+		first.text.localeCompare(second.text, "en"),
+	);
 }
 
 export function strikePath(random: () => number = Math.random): string {
