@@ -1,6 +1,7 @@
 {
 	"name": "shuntksh.com",
 	"private": true,
+	"license": "MIT",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {

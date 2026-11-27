@@ -1,0 +1,22 @@
+Content License
+
+Copyright (c) 2026 Shun Takahashi
+
+The source code in this repository is licensed under the MIT License (see
+LICENSE). The site content is licensed under the Creative Commons Attribution
+4.0 International License (CC BY 4.0). This includes the page text, the hiking
+data in src/data/, the favicon, and the social preview image.
+
+You may share and adapt the content for any purpose, including commercially,
+as long as you give appropriate credit, provide a link to the license, and
+indicate if changes were made.
+
+To view a copy of this license, visit
+https://creativecommons.org/licenses/by/4.0/
+
+Not covered by this license:
+
+- The Atkinson Hyperlegible fonts in src/assets/fonts/, which are licensed
+  under the SIL Open Font License 1.1 (see src/assets/fonts/OFL.txt).
+- The GitHub and LinkedIn logos in src/assets/, which are trademarks of their
+  respective owners.
