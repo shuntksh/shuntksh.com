@@ -1,0 +1,103 @@
+---
+import "@/styles/global.css";
+import GitHubIcon from "@/assets/github.svg";
+import LinkedInIcon from "@/assets/linkedin.svg";
+import MarkerHighlight from "@/components/MarkerHighlight.astro";
+
+const title = "shuntksh";
+const description =
+	"Software engineer in Seattle specializing in cloud and AI infrastructure, and tinkering with graphics programming";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
+		<link rel="canonical" href={canonicalURL} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+	</head>
+	<body>
+		<main>
+			<h1><span class="visually-hidden">Shun Takahashi</span><span class="typewriter" aria-hidden="true"><span class="typewriter__prompt">&gt;</span><span class="typewriter__text typewriter__text--error" data-typewriter-text></span><span class="typewriter__cursor typewriter__cursor--blink" data-typewriter-cursor></span></span></h1>
+			<p>
+				Hi, I'm a <MarkerHighlight text="software engineer" /> based in <MarkerHighlight text="Seattle" />. I specialize in cloud and AI infrastructure.
+				In my spare time, I enjoy exploring <MarkerHighlight text="graphics programming" />.
+			</p>
+			<p class="hiking-intro">
+				I enjoy <MarkerHighlight text="long-distance hiking" />. Here’s my <a href="/thruhiking-bucket-list/">thruhiking bucket list</a>.
+			</p>
+			<nav aria-label="Social links">
+				<ul class="socials">
+					<li>
+						<a href="https://github.com/shuntksh" rel="me" aria-label="GitHub">
+							<GitHubIcon width={24} height={24} fill="currentColor" aria-hidden="true" />
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/shuntksh/" rel="me" aria-label="LinkedIn">
+							<LinkedInIcon width={24} height={24} fill="currentColor" aria-hidden="true" />
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</main>
+		<script>
+			const INITIAL_TEXT = "[object Object]";
+			const FINAL_TEXT = "Shun Takahashi";
+			const INITIAL_DELAY = 1500;
+			const BACKSPACE_SPEED = 50;
+			const PAUSE_BEFORE_TYPING = 500;
+			const BASE_TYPING_SPEED = 80;
+			const JITTER_RANGE = 40;
+
+			const wait = (ms: number): Promise<void> =>
+				new Promise((resolve) => setTimeout(resolve, ms));
+
+			async function play(text: HTMLElement, cursor: HTMLElement): Promise<void> {
+				const setBlinking = (blinking: boolean): void => {
+					cursor.classList.toggle("typewriter__cursor--blink", blinking);
+				};
+
+				await wait(INITIAL_DELAY);
+				setBlinking(false);
+				let current = text.textContent ?? "";
+				while (current.length > 0) {
+					await wait(BACKSPACE_SPEED);
+					current = current.slice(0, -1);
+					text.textContent = current;
+				}
+				text.classList.remove("typewriter__text--error");
+
+				setBlinking(true);
+				await wait(PAUSE_BEFORE_TYPING);
+				setBlinking(false);
+				for (let length = 1; length <= FINAL_TEXT.length; length += 1) {
+					await wait(BASE_TYPING_SPEED + Math.random() * JITTER_RANGE);
+					text.textContent = FINAL_TEXT.slice(0, length);
+				}
+				setBlinking(true);
+			}
+
+			const text = document.querySelector<HTMLElement>("[data-typewriter-text]");
+			const cursor = document.querySelector<HTMLElement>(
+				"[data-typewriter-cursor]",
+			);
+			if (text !== null && cursor !== null) {
+				if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+					text.textContent = FINAL_TEXT;
+					text.classList.remove("typewriter__text--error");
+				} else {
+					text.textContent = INITIAL_TEXT;
+					void play(text, cursor);
+				}
+			}
+		</script>
+	</body>
+</html>

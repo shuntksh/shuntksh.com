@@ -1,0 +1,35 @@
+---
+import { strikePath, type Trip } from "@/lib/checklist";
+import MarkerHighlight from "@/components/MarkerHighlight.astro";
+
+interface Props {
+	title: string;
+	trips: Trip[];
+}
+
+const { title, trips } = Astro.props;
+const strikeImage = (): string => `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="${strikePath()}" fill="none" stroke="#d45b38" stroke-width="1.7" stroke-linecap="round"/></svg>`)}")`;
+---
+
+<section class="trip-checklist" aria-label={title}>
+	<h2>{title}</h2>
+	<ul class="trip-checklist__items">
+		{trips.map((trip) => (
+			<li class:list={["trip-checklist__item", { "trip-checklist__item--done": trip.done }]}>
+				<svg class="trip-checklist__mark" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+					<rect x="2" y="2" width="16" height="16" rx="2" />
+					{trip.done && <path d="m5 10 3 3 7-7" stroke-linecap="round" stroke-linejoin="round" />}
+				</svg>
+				<span>
+					<span class="visually-hidden">{trip.done ? "Completed: " : "Not completed: "}</span>
+					<span class="trip-checklist__text" style={{ "--trip-strike": strikeImage() }}>{trip.done ? <MarkerHighlight text={trip.text} /> : trip.text}</span>
+					{trip.country !== undefined && <span class="trip-checklist__year"> ({trip.country})</span>}
+					{trip.year !== undefined && <span class="trip-checklist__year"> (Done, {trip.year})</span>}
+					<span class="trip-checklist__details">
+						{trip.source !== undefined ? <a class="trip-checklist__description" href={trip.source}>{trip.description}</a> : trip.description}{trip.note !== undefined && <span class="trip-checklist__note">{` ${trip.note}`}</span>}
+					</span>
+				</span>
+			</li>
+		))}
+	</ul>
+</section>

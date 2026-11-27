@@ -1,0 +1,267 @@
+{
+	"title": "Thruhiking Bucket List",
+	"description": "Long-distance trails I have completed and the routes I want to hike next, in North America and beyond.",
+	"categories": [
+		{
+			"title": "North America",
+			"trips": [
+				{
+					"text": "Arizona Trail",
+					"description": "About 1,287 km (800 mi) across Arizona from the Utah border to the Mexico border.",
+					"source": "https://aztrail.org/the-trail/",
+					"done": true,
+					"year": 2024,
+					"note": "Hiked from Page to the Mexico border."
+				},
+				{
+					"text": "Colorado Trail",
+					"description": "782-790 km (486-491 mi) from Denver to Durango, Colorado, depending on the Collegiate route.",
+					"source": "https://coloradotrail.org/trail/",
+					"done": true,
+					"year": 2023,
+					"note": "Hiked from Denver to Durango via the Collegiate West alternate."
+				},
+				{
+					"text": "Continental Divide Trail",
+					"description": "About 4,989 km (3,100 mi) from Mexico to Canada along the Rocky Mountains in the USA.",
+					"source": "https://cdtcoalition.org/explore-the-trail/",
+					"done": false,
+					"note": "Hiked sections in the Wind River Range, Yellowstone, Colorado via the Colorado Trail and San Juan Mountains, and Gila Canyon. Goal: attempt the full trail."
+				},
+				{
+					"text": "Great Divide Trail",
+					"description": "About 1,123 km (698 mi) through the Canadian Rockies in Alberta and British Columbia.",
+					"source": "https://greatdividetrail.com/discover-the-gdt/",
+					"done": false,
+					"note": "Hiked sections through Banff and Jasper. Goal: hike the full trail in one trip."
+				},
+				{
+					"text": "John Muir Trail",
+					"description": "About 340 km (211 mi) from Yosemite Valley to the summit of Mount Whitney in California.",
+					"source": "https://www.nps.gov/yose/planyourvisit/jmt.htm",
+					"done": true,
+					"year": 2022,
+					"note": "Hiked from Yosemite via Little Yosemite Valley to the summit of Mount Whitney."
+				},
+				{
+					"text": "Pacific Crest Trail",
+					"description": "About 4,265 km (2,650 mi) from Mexico to Canada through California, Oregon, and Washington.",
+					"source": "https://www.pcta.org/discover-the-trail/",
+					"done": false,
+					"note": "Hiked the Washington section on my first attempt in 2026. Goal: hike the full trail."
+				},
+				{
+					"text": "Sierra High Route",
+					"description": "About 314 km (195 mi) from Road’s End in Kings Canyon to Twin Lakes through California’s High Sierra, largely off trail.",
+					"source": "https://andrewskurka.com/adventures/sierra-high-route/about-the-sierra-high-route/",
+					"done": false
+				},
+				{
+					"text": "Uinta Highline Trail",
+					"description": "About 129 km (80 mi) from Leidy Peak to Hayden Pass across Utah’s Uinta Mountains.",
+					"source": "https://www.lbhikes.com/p/uinta-highline-trail-guide.html",
+					"done": true,
+					"year": 2024,
+					"note": "Hiked from Leidy Peak to Hayden Pass Trailhead, skipping the first dry section. Arranging the shuttle with two cars was a bit challenging."
+				},
+				{
+					"text": "Wonderland Trail",
+					"description": "A 150 km (93 mi) loop around Mount Rainier in Washington.",
+					"source": "https://www.nps.gov/mora/planyourvisit/the-wonderland-trail.htm",
+					"done": true,
+					"year": 2021
+				}
+			]
+		},
+		{
+			"title": "International",
+			"trips": [
+				{
+					"text": "Alta Via 2",
+					"description": "About 180 km (112 mi) from Bressanone to Feltre through Italy’s Dolomites.",
+					"source": "https://www.visitdolomitibellunesi.com/en/what-to-do/hiking/alte-vie/alta-via-2-of-the-dolomites",
+					"done": false,
+					"country": "Italy"
+				},
+				{
+					"text": "Cape Wrath Trail",
+					"description": "About 370 km (230 mi) from Fort William to Cape Wrath in Scotland, UK; distance varies with the route.",
+					"source": "https://dam.cicerone.co.uk/book/1134/1134_cape-wrath-trail-webpdf-2022.pdf",
+					"done": false,
+					"country": "Scotland, UK"
+				},
+				{
+					"text": "GR11 Pyrenees",
+					"description": "About 840 km (522 mi) across the Pyrenees through Spain and Andorra; distance varies with the route.",
+					"source": "https://www.cleverhiker.com/backpacking/gr11-trip-guide/",
+					"done": false,
+					"country": "Spain"
+				},
+				{
+					"text": "GR20 Corsica",
+					"description": "About 180 km (112 mi) from Calenzana to Conca across Corsica, France.",
+					"source": "https://www.pnr.corsica/uploads/5e1ea12c2307ebf7ec0e187e2c5d9d3b.pdf",
+					"done": false,
+					"country": "France"
+				},
+				{
+					"text": "Great Himalaya Trail — Nepal High Route",
+					"description": "About 1,700 km (1,056 mi) on the high route across Nepal.",
+					"source": "https://www.greathimalayatrail.com/tour-item/ght-nepal-high-route/",
+					"done": false,
+					"country": "Nepal"
+				},
+				{
+					"text": "Hexatrek",
+					"description": "3,034 km (1,885 mi) across France from the Vosges to the Pyrenees.",
+					"source": "https://www.hexatrek.com/en",
+					"done": false,
+					"country": "France"
+				},
+				{
+					"text": "Kungsleden",
+					"description": "About 450 km (280 mi) from Abisko to Hemavan in Sweden.",
+					"source": "https://www.svenskaturistforeningen.se/guider-tips/leder/kungsleden/",
+					"done": false,
+					"country": "Sweden"
+				},
+				{
+					"text": "Laugavegur & Fimmvörðuháls Trail",
+					"description": "About 80 km (50 mi) from Landmannalaugar to Skógar via Þórsmörk in Iceland.",
+					"source": "https://www.fi.is/en/hiking-trails/trails/laugavegur",
+					"done": true,
+					"year": 2022,
+					"note": "Hiked hut to hut from Landmannalaugar to Skógar. Rugged but beautifully remote.",
+					"country": "Iceland"
+				},
+				{
+					"text": "Nordkalottruta / Arctic Scandinavia",
+					"description": "About 800 km (497 mi) through Norway, Sweden, and Finland.",
+					"source": "https://enontekiolapland.com/en/nodrkalott-trail/",
+					"done": false
+				},
+				{
+					"text": "Pyrenean Haute Route",
+					"description": "About 750 km (466 mi) along the high Pyrenees through France, Spain, and Andorra, on a largely unmarked route.",
+					"source": "https://dam.cicerone.co.uk/craft-assets/catalogue/Trade-Cat-2025-Lo-Res.pdf",
+					"done": false
+				},
+				{
+					"text": "Te Araroa — South Island",
+					"description": "About 1,363 km (847 mi) across New Zealand’s South Island.",
+					"source": "https://www.teararoa.org.nz/the-trail/",
+					"done": false
+				},
+				{
+					"text": "Via Alpina",
+					"description": "About 2,000 km (1,243 mi) across eight Alpine countries from the Adriatic to Monaco on the current main route.",
+					"source": "https://www.via-alpina.org/via-alpina/",
+					"done": false
+				},
+				{
+					"text": "Via Dinarica — White Trail",
+					"description": "About 1,260 km (783 mi) on the White Trail from Slovenia through Croatia, Bosnia and Herzegovina, and Montenegro to Albania.",
+					"source": "https://viadinarica.com/de/ueber-uns/media-2?catid=24&id=199%3Aotvaranje-bijele-via-dinarica-staze-u-bih-11-6-u-parku-prirode-blidinje&view=article",
+					"done": false
+				}
+			]
+		}
+	],
+	"memorableRoutes": {
+		"title": "Memorable backpacking routes",
+		"paragraph": [
+			{
+				"text": "Some of my most memorable backpacking routes in North America include the ",
+				"highlight": false
+			},
+			{
+				"text": "Tonto Trail",
+				"highlight": true
+			},
+			{
+				"text": " in the Grand Canyon; ",
+				"highlight": false
+			},
+			{
+				"text": "Coyote Gulch",
+				"highlight": true
+			},
+			{
+				"text": " and ",
+				"highlight": false
+			},
+			{
+				"text": "Paria Canyon",
+				"highlight": true
+			},
+			{
+				"text": " in Utah; ",
+				"highlight": false
+			},
+			{
+				"text": "Titcomb Basin",
+				"highlight": true
+			},
+			{
+				"text": " and ",
+				"highlight": false
+			},
+			{
+				"text": "Cirque of the Towers",
+				"highlight": true
+			},
+			{
+				"text": " in the Wind River Range, and the ",
+				"highlight": false
+			},
+			{
+				"text": "Teton Crest Trail",
+				"highlight": true
+			},
+			{
+				"text": " in Wyoming; the ",
+				"highlight": false
+			},
+			{
+				"text": "Grand Sawtooth Loop",
+				"highlight": true
+			},
+			{
+				"text": " in Idaho; ",
+				"highlight": false
+			},
+			{
+				"text": "Copper Ridge Loop",
+				"highlight": true
+			},
+			{
+				"text": ", ",
+				"highlight": false
+			},
+			{
+				"text": "Napeequa Valley",
+				"highlight": true
+			},
+			{
+				"text": ", and ",
+				"highlight": false
+			},
+			{
+				"text": "Seven Lakes Basin",
+				"highlight": true
+			},
+			{
+				"text": " in Olympic National Park in Washington; and the ",
+				"highlight": false
+			},
+			{
+				"text": "Timberline Trail",
+				"highlight": true
+			},
+			{
+				"text": " in Oregon.",
+				"highlight": false
+			}
+		]
+	}
+}

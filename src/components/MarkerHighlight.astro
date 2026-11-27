@@ -1,0 +1,27 @@
+---
+import { markerPath } from "@/lib/marker";
+
+interface Props {
+	text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<span class="marker-highlight">
+	<svg class="marker-highlight__ink" viewBox="0 0 104 36" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-marker-highlight>
+		<path d={markerPath()} fill="currentColor" opacity="0.55" />
+		<path d={markerPath()} fill="currentColor" opacity="0.25" />
+	</svg>
+	<span class="marker-highlight__text">{text}</span>
+</span>
+
+<script>
+	import { markerPath } from "@/lib/marker";
+
+	for (const marker of document.querySelectorAll("[data-marker-highlight]")) {
+		for (const path of marker.querySelectorAll("path")) {
+			path.setAttribute("d", markerPath());
+		}
+	}
+</script>

@@ -1,0 +1,17 @@
+{
+	"name": "shuntksh.com",
+	"private": true,
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && wrangler pages dev",
+		"astro": "astro",
+		"deploy": "astro build && wrangler pages deploy"
+	},
+	"dependencies": {
+		"astro": "7.4.7",
+		"wrangler": "4.158.0"
+	}
+}
