@@ -1,0 +1,49 @@
+---
+import "@/styles/global.css";
+import { Font } from "astro:assets";
+import { pageTitle, SITE_NAME } from "@/lib/site";
+
+interface Props {
+	/** Page title; the homepage omits it to use the site name alone. */
+	title?: string;
+	description?: string;
+	/** Keep the page out of search results, such as the 404 page. */
+	noindex?: boolean;
+}
+
+const { title, description, noindex = false } = Astro.props;
+const fullTitle = pageTitle(title);
+const canonicalURL =
+	Astro.site !== undefined ? new URL(Astro.url.pathname, Astro.site) : undefined;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<Font cssVariable="--font-atkinson" preload />
+		<title>{fullTitle}</title>
+		{description !== undefined && <meta name="description" content={description} />}
+		{noindex && <meta name="robots" content="noindex" />}
+		{!noindex && canonicalURL !== undefined && (
+			<>
+				<link rel="canonical" href={canonicalURL} />
+				<link rel="sitemap" href="/sitemap-index.xml" />
+				<meta property="og:type" content="website" />
+				<meta property="og:site_name" content={SITE_NAME} />
+				<meta property="og:title" content={fullTitle} />
+				{description !== undefined && <meta property="og:description" content={description} />}
+				<meta property="og:url" content={canonicalURL} />
+				<meta property="og:locale" content="en_US" />
+			</>
+		)}
+	</head>
+	<body>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>

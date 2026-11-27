@@ -11,10 +11,19 @@ There is no blog, UI framework, CSS framework, or server code.
 - `src/pages/thruhiking-bucket-list.astro` - the hiking page, built from
   `src/data/thruhiking.json`
 - `src/pages/404.astro` - the not-found page
+- `src/layouts/BaseLayout.astro` - shared document shell: head metadata, fonts,
+  canonical URL, and Open Graph tags; every page uses it
 - `src/components/` - Astro components (marker highlight, trip checklist)
 - `src/lib/` - pure TypeScript helpers and their tests
 - `src/styles/global.css` - all styles; design tokens are at the top on `:root`
-- `public/` - favicon, `robots.txt`, and Atkinson fonts
+- `src/assets/fonts/` - Atkinson Hyperlegible files and their license, loaded
+  through the Astro Fonts API configured in `astro.config.mjs`
+- `public/` - favicon, `robots.txt`, and `_headers` (Cloudflare Pages security
+  and cache headers)
+
+Astro emits a Content Security Policy `<meta>` tag on every page
+(`security.csp`). Keep scripts in Astro `<script>` blocks so they get hashed, and
+do not load third-party scripts, styles, or fonts without updating the policy.
 
 ## Commands
 
